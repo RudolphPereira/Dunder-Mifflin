@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #efefef;
+  min-height: 100vh;
+  animation: opening 1s ease-in;
+}
+
+.office {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.office-title-container {
+  position: relative;
+}
+
+.office-title {
+  display: block;
+  font-size: 3rem;
+  color: #7882a4;
+  margin-bottom: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  padding-top: 3rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.tap-me-sticker {
+  position: absolute;
+  top: 16%;
+  right: 0;
+  display: inline-block;
+  width: 3.3rem;
+  height: 3.3rem;
+  font-size: 0.7rem;
+  background: #5b5b5b;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transform: rotateZ(-20deg);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.tap-me-sticker:hover {
+  background: #b7657b;
+  color: #fff;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.office-title:hover {
+  color: #b7657b;
+}
+
+.office-title:active {
+  color: #b7657b;
+}
+
+.office-image-container {
+  width: 40rem;
+  height: 100%;
+}
+
+.office-image {
+  border-radius: 1rem;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.office-qoutes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.office-qoutes-container span {
+  color: #b7657b;
+}
+
+.office-quote {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #5b5b5b;
+}
+
+.office-charc {
+  font-size: 1.2rem;
+  color: #b7657b;
+}
+
+.office-shuffle-btn-container {
+  display: flex;
+}
+
+.office-btn {
+  text-align: center;
+  display: inline-block;
+  width: 10rem;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  background: #7882a4;
+  color: #fff;
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  margin-bottom: 2rem;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.office-btn:hover {
+  background: rgb(255, 255, 255);
+  color: #7882a4;
+}
+
+.office-btn:active {
+  transform: scale(0.98);
+}
+
+.office-btn-two {
+  margin-left: 1rem;
+}
+
+.close-button {
+  display: none;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.office-episodes-container {
+  margin: 1rem 0;
+}
+
+.office-episodes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.office-episode {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 30rem;
+  background: #fff;
+  margin: 1rem;
+  padding: 1.2rem 1rem;
+  border-radius: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.office-episode:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.episode-title {
+  flex: 1;
+  margin: 0.5rem 0;
+  color: #b7657b;
+}
+
+.episode-desc {
+  flex: 2;
+  font-size: 0.9rem;
+  color: #5b5b5b;
+}
+
+.episode-info {
+  flex: 1;
+  display: inline-block;
+  margin-top: 2rem;
+  color: #7882a4;
+}
+
+/* Animation */
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes turnaround {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 652px) {
+  .office-image-container {
+    width: auto;
+  }
+
+  .office-shuffle-btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .office-btn {
+    margin-bottom: 0.5rem;
+  }
+
+  .close-button,
+  .office-btn-two {
+    margin-left: 0;
+  }
+
+  .office-episode {
+    margin: 1rem 0;
+  }
+}
