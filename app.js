@@ -20,6 +20,7 @@ shuffleBtn.addEventListener("click", getQuotes);
 episodeBtn.addEventListener("click", episodeList);
 closeBtn.addEventListener("click", toggleEpisodes);
 officeTitleSticker.addEventListener("click", playAudio);
+officeAudio.addEventListener("ended", stopAnim);
 
 // Functions
 // Play audio
@@ -34,6 +35,12 @@ function playAudio() {
     officeTitleSticker.innerText = "Tap Me!";
     officeTitleSticker.style.animation = "none";
   }
+}
+
+// Stop Animation
+function stopAnim() {
+  officeTitleSticker.innerText = "Tap Me!";
+  officeTitleSticker.style.animation = "none";
 }
 
 // Get quotes
